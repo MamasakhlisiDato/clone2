@@ -20,8 +20,10 @@ body {
 }
 .topnav .search i {
   color: #fff;
-background-color: red;
 padding: 22px;
+}
+.topnav .search i:hover {
+  background-color: red;
 }
 .topnav a {
   float: left;
