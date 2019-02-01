@@ -1,0 +1,483 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    margin:0;
+    font-family:Arial
+}
+
+.topnav {
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    background-color: black;
+}
+.topnav .search{
+ display: flex;
+ justify-content: flex-end;  
+}
+.topnav .search i {
+  color: #fff;
+background-color: red;
+padding: 22px;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 20px 30px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+ 
+  position: fixed;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+      position: relative;
+    }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {
+      float: none;
+    }
+  .topnav.responsive .dropdown-content {
+      position: relative;
+    }
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  z-index: -1;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  text-align: center;
+}
+
+.textt {
+    color: #f2f2f2;
+    font-size: 22px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+  }
+
+
+
+
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 600px) {
+  .text {
+      font-size: 18px
+    }
+  .textt {
+      font-size: 15px;
+  }
+  .description {
+    text-align: center;
+}
+}
+
+
+
+
+
+
+.title {
+    text-align: center;
+    margin-top: 70px;
+}
+.title h3 {
+    padding: 20px;
+    color: gray;
+}
+.description {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 30px;
+}
+.cards {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    text-align: center;
+    font-size: 12px;
+    color: #282828;
+}
+@media only screen and (max-width: 600px) {
+    .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+  }
+.cards .card img {
+    border-radius: 10px;
+    width: 200px;
+}
+
+
+#tour {
+    background: black;
+}
+#tour .title {
+    text-align: center;
+    padding: 50px;
+}
+#tour .title h1 {
+    color: #fff;
+    padding: 40px;
+    letter-spacing: 7px;
+}
+#tour .title h4 {
+    color: gray;
+}
+
+#tour .month {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+}
+#tour .month h1 {
+    font-size: 18px;
+    color: gray;
+    padding: 10px 15px;
+    border-bottom: 1px solid gray;
+}
+#tour .month h1 .sold {
+    text-decoration: none;
+    color: rgb(214, 214, 214);
+    background: rgb(216, 38, 38);
+    padding: 5px;
+}
+#tour .month h1 .round {
+    background: black;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 100%;
+    padding: 5px;
+    float: right;
+    margin-right: 20px;
+    margin-top: -5px;
+}
+
+#tour .tickets {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#tour .tickets .ticket {
+    background-color: #fff;
+    width: 300px;
+    margin: 30px 1px;
+}
+#tour .tickets .ticket img{
+    width: 300px;
+}
+#tour .tickets .ticket .tt {
+    padding: 20px;
+    font-size: 17px;
+}
+#tour .tickets .ticket .date {
+    padding: 20px 20px;
+    font-size: 17px;
+    color: gray;
+}
+#tour .tickets .ticket p {
+    padding: 20px 20px;
+    font-size: 18px;
+}
+#tour .tickets .ticket .ttitle button {
+    background: black;
+    border: 0;
+    color: #fff;
+    font-size: 18px;
+    padding: 14px 20px;
+    margin: 20px;
+}
+#tour .height {
+    width: 100%;
+    height: 100px;
+}
+
+
+
+
+.contact {
+  max-width: 895px;
+  width: 100%;
+  margin: 0 auto;
+}
+.contact .ttitle {
+  text-align: center;
+  padding: 70px;
+}
+.contact .ttitle h1 {
+  letter-spacing: 5px;
+}
+.contact .ttitle h3 {
+  padding: 20px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: gray;
+}
+
+.contact .address {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+.contact .address i {
+  padding: 5px;
+}
+.contact .form {
+  float: right;
+  display: flex;
+  flex-direction: column;
+}
+.form form input {
+  padding: 10px 15px;
+  margin: 5px;
+}
+.form .msgform input {
+  margin-top: 8px;
+  margin: 5px;
+  width: 98%;
+  padding: 10px;
+}
+.form .msgform .btnform {
+  float: right;
+  background: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+}
+.form .msgform .btnform:hover {
+  color: black;
+  background: gray;
+}
+.contact .height {
+  width: 100%;
+  height: 250px;
+}
+@media only screen and (max-width: 600px) {
+  .contact {
+    padding: 10px;
+  }
+  .form form input {
+    padding: 10px 15px;
+    margin: 5px;
+    width: 97%;
+  }
+  .form .msgform input {
+    margin-top: 8px;
+    margin: 5px;
+    width: 97%;
+   
+  }
+  .form .msgform .btnform {
+    padding: 10px 20px;
+  }
+  .contact .height {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+
+
+
+.map {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-image: url('../img/map.jpg');
+
+}
+
+
+
+.footer footer {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.footer footer i {
+  color: gray;
+  font-size: 28px;
+  padding: 1px;
+
+}
+.footer footer h2 {
+  font-size: 19px;
+  color: gray;
+  padding: 20px;
+
+}
+.footer footer h2 a {
+  font-size: 18px;
+  color: gray;
+}
+
+
+@media only screen and (max-width: 600px) {
+  #tour .tickets {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  #tour .tickets .ticket {
+    width: 350px;
+}
+#tour .tickets .ticket img{
+    width: 350px;
+}
+#tour .month {
+  width: 85%;
+
+}
+.map {
+  width: 100%;
+  height: 50vh;
+  background-size: cover;
+  background-image: url('../img/map.jpg');
+
+}
+.topnav .search{
+  display: none;
+ }
+}
